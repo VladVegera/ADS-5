@@ -13,7 +13,7 @@ int priority(char symbol) {
     default: return 4;
   }
 }
-int calc(int variable1, int variable2,cahr oper) {
+int calc(int variable1, int variable2,char oper) {
   switch (oper){
     case '+': return variable1 + variable2;
     case '-': return variable1 - variable2;
@@ -63,7 +63,7 @@ std::string infx2pstfx(std::string inf) {
   }
   return res;
 }
-int eval(std::string pref) {
+int eval(std::string post) {
   TStack <int, 100> stack;
   int x, y;
   for (int i = 0; i < post.size(); i++) {
@@ -72,7 +72,7 @@ int eval(std::string pref) {
       stack.pop();
       x = stack.get();
       stack.pop();
-      stack.push(calk(post[i], x, y));
+      stack.push(calc(post[i], x, y));
     } else if (priority(post[i]) == 4 && post[i] != ' ') {
       stack.push(post[i] - '0');
     }
