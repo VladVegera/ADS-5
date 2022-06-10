@@ -4,10 +4,10 @@
 
 template<typename T, int size>
 class TStack {
-   private:
+   private: 
     T array[100];
     int top;
-   public:
+   public: 
     TStack():top(-1) { }
     T get() const {
       return array[top];
