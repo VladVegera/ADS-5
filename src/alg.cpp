@@ -13,7 +13,6 @@ int priority(char symbol) {
     default: return 4;
   }
 }
-
 int calc(int variable1, int variable2,cahr oper) {
   switch (oper){
     case '+': return variable1 + variable2;
@@ -25,7 +24,6 @@ int calc(int variable1, int variable2,cahr oper) {
     break;
   }
 }
-
 std::string infx2pstfx(std::string inf) {
   TStack <char, 100> stack;
   std::string res;
@@ -65,7 +63,6 @@ std::string infx2pstfx(std::string inf) {
   }
   return res;
 }
-
 int eval(std::string pref) {
   TStack <int, 100> stack;
   int x, y;
