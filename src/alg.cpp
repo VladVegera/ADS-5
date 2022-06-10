@@ -80,7 +80,7 @@ int eval(std::string pref) {
       stack1.pop();
       int temp2 = stack1.get();
       stack1.pop();
-      stack1.push(calc( temp1, temp2, sym));
+      stack1.push(calc(temp1, temp2, sym));
     }
   }
   result = stack1.get();
