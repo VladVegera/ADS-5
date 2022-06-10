@@ -13,8 +13,8 @@ int priority(char symbol) {
     default: return 4;
   }
 }
-int calc(int variable1, int variable2,char oper) {
-  switch (oper){
+int calc(int variable1, int variable2, char oper) {
+  switch (oper) {
     case '+': return variable1 + variable2;
     case '-': return variable1 - variable2;
     case '*': return variable1 * variable2;
